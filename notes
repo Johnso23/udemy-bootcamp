@@ -1,0 +1,207 @@
+THE DOM
+Document Object Model
+
+The Document Object Model is the interface betwen your Javascript and your HTML + CSS
+
+
+Why Should You Care About The DOM?
+
+a few examples:
+
+1.Games
+2. Scrolling Effects
+3. Dropdown menus
+4. Form Validations
+5. Interactivity
+6. Animations
+7. Every awesome site ever
+
+DOM Manipulation
+
+We're goign to cover different ways of:
+
+changing an element's style
+adding/removing classes
+changing the content fo a tag
+changing attributes(src, href, etc.)
+
+
+An ALternative
+Rather than directly manipulating style with JS, we can define a CSS class and then toggle it on or off with JS
+
+//Instead of THIS:
+var tag = document.getElementById("highlight");
+tag.style.color = "blue";
+tag.style.border = "10px solid red"
+
+//Define a Class in css
+
+.some-class {
+	color: blue;
+	border: 10px solid red; 
+}
+
+var tag = document.getElementById("highlight");
+//ADD THE NEW CLASS TO THE SELECTED ELEMENT
+tag.classList.add("some-class");
+
+
+classList
+
+a read only list that contains the calsses for a given element. it is not an array.
+
+//Define a class in css
+
+.another-class {
+	color: purple;
+	fontSize: 76px;
+}
+
+var tag = document.querySelector("h1");
+
+//Add A class to the selected Element
+
+
+textContent
+
+Returns a string of all the text contained in a given element
+
+
+
+DOM Events
+Making Things Interactive
+
+Events are everywhere
+Clicking a button
+Hovering over a link
+dragging and Dropping
+Pressing the Enter Key
+
+
+THE PROCESS
+
+WE select an element and the nadd an event listener
+
+"Listen for a hover event on the <h1>"
+
+"Listen for a click on this <button>"
+
+"Listen for a keypress event on text input"
+
+
+The Syntax
+
+To add a listener, we use a method called addEventListener
+
+element.addEventListener(type, functionToCall);
+
+var button = document.querySelector("button");
+button.addEventListener("click", function()) {
+	console.log("Someone Clicked the Button!");
+});
+
+
+
+
+JQUERY
+
+
+What is JQUERY?
+Jquery is a DOM manipulation library. Jquery is a fast, small, and feature-rich  JAvascript library. It makes tings like HTML document traversal and manipulation, event handling, animation, and AJAX much simplier with a neasy-to-use API that works across a multitude of browsers. With a combination of versatility and extensiblity, jQuery has changed the way that millions of people write Javascript. 
+
+It comes with a bunch of useful methods to things like: 
+Select Elements 
+Manipulate Elements
+Create ELements 
+Add EVent Listeners
+Animate Elements
+Add Effects
+Make HTTP Requests(AJAX)
+
+
+What is a library?
+
+
+WHy would you use JQUERY?
+Fixes "broken" DOM API
+Brevity and Clarity
+Ease of use
+Cross-Browser Support
+AJAX
+Lot's of people use JQuery: many materials related to Jquery
+
+
+
+
+Why would you not use JQuery?
+
+THe DOM API is no longer "broken"
+It doesnt do anything you cant do on your own
+its an unneccessary dependecy 
+Performance
+Lot's of people are mvoing away from JQuery!
+
+JQuery and its cousins are great, and by all meas use them if it makes it easier to develop your application
+
+If you're develping a library on the other hand, please take a moment to consider if you actually need jQuery as a dependecy. Maybe you can include a few lines of utility code, and forgo the requirement. If you're only targeting more modern browsers, you might not need anything more than what the browser ships with.
+
+At the very least, make sure you know what jQuery is doing for you, and what it's not. Some developers believe that jQuery is doing for you, and what it's not . Some developers beleive that jQuery is protecting us fro ma great demon of browser imcompatibility when, in truth, post IE8, browser re prety easy to deal with on their own. 
+
+EITHER WAY ITS WORTH KNOWING
+
+Selecting with Jquery
+$("selectorGoesHere")
+
+Selecting with jQuery is very simliar to querySelectorAll, in that we provide a CSS style selector and jQuery will return all matching elements
+
+Manipulating Style
+
+The .css() method is jQuery's interface to styling
+
+$(selector)
+.css(property, value)
+
+Common JQuery Methods
+
+Objectives
+val()
+text()
+attr()
+html()
+addClass()
+removeCLass()
+toggleClass()
+
+
+
+jQuery Events
+Making Things Interactive
+
+.click()
+.keypress()
+.on()
+
+Click()
+jQuery's click() method is a quick and easy way to add a click listener to element(s)
+
+
+keypress()
+jQuery's keypress() method is a quick and easy way to add a keypress listener to element(s)
+
+
+on()
+jQuery's on() works similarly to addEventListener. It lets you specify the type of event to listen for.
+
+In most cases, click() and on('click') will both get the job done. HOWEVER, there is one key difference:
+
+click() only adds listeners for exisiting elements
+on() will add listeners for all potential future elements
+
+Effects
+
+
+
+
+
+
+

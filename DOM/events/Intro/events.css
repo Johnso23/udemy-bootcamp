@@ -1,0 +1,25 @@
+body{
+	background-color: black;
+}
+
+h1 {
+
+	font-size: 60px;
+	color: white;
+	font-weight: 800px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+button {
+	font-size: 60px;
+	color: white;
+	font-weight: 800px;
+	font-family: 'PT Sans', sans-serif;
+}
+
+p {
+	font-size: 60px;
+	color: white;
+	font-weight: 800px;
+	font-family: 'PT Sans', sans-serif;
+}

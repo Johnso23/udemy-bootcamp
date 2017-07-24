@@ -1,0 +1,15 @@
+Note regarding color game
+Section 15, Lecture 161
+Note: If you complete the exercise, but your color choice shows "Wrong" even when it is correct, then take a look at your colors array and make sure that the colors have spaces after the commas in the RGB expression, otherwise the picked color will not match the randomly selected color.
+
+e.g.,
+Correct: "rgb(255, 0, 0)"
+
+Incorrect: "rgb(255,0,0)"
+
+
+Also, if you are using firefox instead of chrome, then see this solution.
+
+Thanks! :)
+Ian
+Course TA

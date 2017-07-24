@@ -1,0 +1,102 @@
+THE DOM
+Document Object Model
+
+The Document Object MOdel is the interface betwen your Javascript and your HTML + CSS
+
+
+Why Should You Care About The DOM?
+
+a few examples:
+
+1.Games
+2. Scrolling Effects
+3. Dropdown menus
+4. Form Validations
+5. Interactivity
+6. Animations
+7. Every awesome site ever
+
+DOM Manipulation
+
+We're goign to cover different ways of:
+
+changing an element's style
+adding/removing classes
+changing the content fo a tag
+changing attributes(src, href, etc.)
+
+
+An ALternative
+Rather than directly manipulating style with JS, we can define a CSS class and then toggle it on or off with JS
+
+//Instead of THIS:
+var tag = document.getElementById("highlight");
+tag.style.color = "blue";
+tag.style.border = "10px solid red"
+
+//Define a Class in css
+
+.some-class {
+	color: blue;
+	border: 10px solid red; 
+}
+
+var tag = document.getElementById("highlight");
+//ADD THE NEW CLASS TO THE SELECTED ELEMENT
+tag.classList.add("some-class");
+
+
+classList
+
+a read only list that contains the calsses for a given element. it is not an array.
+
+//Define a class in css
+
+.another-class {
+	color: purple;
+	fontSize: 76px;
+}
+
+var tag = document.querySelector("h1");
+
+//Add A class to the selected Element
+
+
+textContent
+
+Returns a string of all the text contained in a given element
+
+
+
+DOM Events
+Making Things Interactive
+
+Events are everywhere
+Clicking a button
+Hovering over a link
+dragging and Dropping
+Pressing the Enter Key
+
+
+THE PROCESS
+
+WE select an element and the nadd an event listener
+
+"Listen for a hover event on the <h1>"
+
+"Listen for a click on this <button>"
+
+"Listen for a keypress event on text input"
+
+
+The Syntax
+
+To add a listener, we use a method called addEventListener
+
+element.addEventListener(type, functionToCall);
+
+var button = document.querySelector("button");
+button.addEventListener("click", function()) {
+	console.log("Someone Clicked the Button!");
+});
+
