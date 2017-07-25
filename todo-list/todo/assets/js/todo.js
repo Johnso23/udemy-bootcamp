@@ -24,13 +24,13 @@
 
 
 //Check Off Specific Todos By Clicking/Rehash code ^^^
-$("li").click(function(){
+$("ul").on("click", "li", function(){
 	$(this).toggleClass("completed");
-});
+}); //only listening to li's in code
 
 //Click on X to delete Todo
 
-$("span").click(function(event){
+$("ul").on("click", "span", function(event){ //clicks only when a span is clicked
 	$(this).parent().fadeOut(500, function(){
 		$(this).remove;
 	});
@@ -41,7 +41,12 @@ $("input[type='text'").keypress(function(event){
 	if(event.which === 13){
 		//grabbing new todo text from input
 		var todoText = $(this).val();
+		$(this).val("");
 		///create a new li and add to ul
-		$("ul").append("<li>" + todoText + "</li>")
+		$("ul").append("<li><span><i class='fa fa-trash'></i></span> "+ todoText + "</li>")
 	}
+});
+
+$("fa-plus").click(function(){
+	$("input[type='text'").fadeToggle();
 });
